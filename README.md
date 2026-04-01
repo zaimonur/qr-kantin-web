@@ -10,7 +10,7 @@ Bu proje, **QR Kantin** sisteminin kantin işletmecileri ve yöneticileri taraf�
 - **Müşteri & Bakiye Yönetimi:** Öğrenci kayıtları, merkezi bakiye yükleme ve harcama geçmişi takibi.
 - **Yetkilendirme:** Role-Based Access Control (RBAC) ile güvenli giriş ve işlem yetkilendirmesi.
 
-## 🛠️ Teknoloji Yığını
+## 🛠️ Projede Kullanılan Teknolojiler
 
 - **Frontend:** Svelte 5 (Runes API), SvelteKit
 - **Styling:** Tailwind CSS
