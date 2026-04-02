@@ -300,11 +300,6 @@
   }
 </script>
 
-/** * @file src/routes/dashboard/menu/+page.svelte * @description Menü Yönetimi:
-Ürün ekleme, stok güncelleme ve kategori işlemlerinin yapıldığı arayüz. *
-@author Onur Zaim * @license Yazılı izin alınmadan ticari amaçla kullanılamaz.
-*/
-
 {#if showDetailsModal}
   <div
     class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/60 backdrop-blur-md px-4"
