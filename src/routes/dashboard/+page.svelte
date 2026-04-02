@@ -6,6 +6,7 @@
    * @license Yazılı izin alınmadan ticari amaçla kullanılamaz.
    */
 
+  import { WS_URL } from "$lib/api/constants";
   import { onMount, onDestroy } from "svelte";
   import { goto } from "$app/navigation";
   import {
@@ -51,7 +52,7 @@
       isLoading = false;
     }
 
-    ws = new WebSocket("ws://localhost:1323/ws");
+    ws = new WebSocket(WS_URL);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === "NEW_ORDER") {
