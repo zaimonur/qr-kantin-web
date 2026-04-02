@@ -5,7 +5,7 @@
  * @license Yazılı izin alınmadan ticari amaçla kullanılamaz.
  */
 
-const API_URL = 'http://localhost:1323';
+import { API_URL } from '$lib/api/constants';
 
 function getHeaders() {
 	const token = localStorage.getItem('token');
