@@ -38,7 +38,7 @@
   }
 
   onMount(async () => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("token"); // Token'ı al
     if (!token) {
       goto("/login");
       return;
@@ -52,7 +52,8 @@
       isLoading = false;
     }
 
-    ws = new WebSocket(WS_URL);
+    // Token'ı URL'e "?token=" formatında ekledik
+    ws = new WebSocket(`${WS_URL}?token=${token}`);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       if (data.type === "NEW_ORDER") {
