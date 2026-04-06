@@ -65,6 +65,7 @@
           note: data.note || "",
           created_at: data.created_at || new Date().toISOString(),
           qr_token: data.qr_token,
+          items: data.items || [], // EKLENEN KISIM: WebSocket'ten gelen ürün detayları
         };
         orders = [newOrder, ...orders];
       }
@@ -165,12 +166,42 @@
                     >₺{order.total_price}</span
                   >
                 </div>
+
                 {#if order.note && order.note.trim() !== ""}
                   <div
                     class="mb-3 bg-yellow-50 border-l-4 border-yellow-400 p-2 rounded-r-md text-xs text-yellow-800"
                   >
                     <strong>Not:</strong>
                     {order.note}
+                  </div>
+                {/if}
+
+                {#if order.items && order.items.length > 0}
+                  <div
+                    class="mb-4 bg-white border border-gray-100 rounded-md overflow-hidden shadow-sm"
+                  >
+                    <div
+                      class="bg-gray-50 px-3 py-1.5 text-[11px] font-bold text-gray-500 uppercase tracking-wider border-b border-gray-100"
+                    >
+                      Sipariş Detayı
+                    </div>
+                    <ul class="divide-y divide-gray-100">
+                      {#each order.items as item}
+                        <li
+                          class="px-3 py-2 flex justify-between items-center text-sm"
+                        >
+                          <span class="text-gray-800 font-medium text-sm">
+                            <span class="text-blue-600 font-bold mr-1"
+                              >{item.quantity}x</span
+                            >
+                            {item.product_name}
+                          </span>
+                          <span class="text-gray-500 text-xs font-semibold"
+                            >₺{(item.price * item.quantity).toFixed(2)}</span
+                          >
+                        </li>
+                      {/each}
+                    </ul>
                   </div>
                 {/if}
                 <div class="mt-4">
