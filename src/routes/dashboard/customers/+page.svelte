@@ -319,7 +319,7 @@
 
   {#if selectedCustomer}
     <div
-      class="fixed inset-0 z-1000] flex items-center justify-center p-4 overflow-hidden"
+      class="fixed inset-0 z-1000 flex items-center justify-center p-4 overflow-hidden"
       transition:fade
     >
       <button
