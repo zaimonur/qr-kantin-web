@@ -34,10 +34,10 @@ Bu proje, **QR Kantin** sisteminin kantin işletmecileri ve yöneticileri taraf�
 ### 👥 Müşteri Onay ve Yönetim
 
 ![Müşteri Onaylama](screenshots/OnayMerkezi.png)
-![Müşterileri Görme](screenshots/MusteriİslemleriMusteriGor.png)
-![Müşteri Bakiye Yükleme](screenshots/MusteriİslemleriBakiyeIslemleri.png)
-![Müşteri Onaylama](screenshots/MusteriİslemleriOgrenciKayit.png)
-![Müşteri Onaylama](screenshots/MusteriİslemleriOgretmenKayit.png)
+![Müşterileri Görme](screenshots/MusteriIslemleriMusteriGor.png)
+![Müşteri Bakiye Yükleme](screenshots/MusteriIslemleriBakiyeIslemleri.png)
+![Müşteri Onaylama](screenshots/MusteriIslemleriOgrenciKayit.png)
+![Müşteri Onaylama](screenshots/MusteriIslemleriOgretmenKayit.png)
 
   </details>
 
